@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body{
+        text-align: center;
+        background-color: rgb(215, 208, 222);
+    }
+    .hello{
+        color: rgb(65, 5, 92);
+    }
+    #button1{
+width: 15%;
+
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #d8da3c;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px #999;
+    }
+    #button2{
+width: 15%;
+
+  display: inline-block;
+  padding: 10px 20px;
+
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #8535db;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px #999;
+  margin: 30px;
+    }
+    #button1:hover {background-color: #8535db}
+
+#button1:active {
+  background-color: #8535db;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+#button2:hover {background-color:  #d8da3c}
+
+#button2:active {
+  background-color: #c4cb38;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+    <title>landing page</title>
+</head>
+<body>
+ 
+    <header>
+        <!-- <nav>
+            <div id="logo"><img src="" alt="logo"></div>
+        </nav> -->
+    </header>
+
+    <main class="landing">
+        <div>
+            <h2 class="hello">Hello There!</h2>
+        </div>
+        <div>
+            <h3 class="hello">Automatic Identity verification which enable to verify your identity.</h3>
+        </div>
+        <div id="img">
+            <img src="./img/image (1).png">
+        </div>
+    
+        <div class="button">
+          <button onclick="document.location='login.html'" target="_blank"  type="button" id="button1">Login</button>
+            <button onclick="document.location='signup.html'" target="_blank"  type="button" id="button2">Sign UP</button>
+        </div>
+    </main>
+</body>
+</html>
