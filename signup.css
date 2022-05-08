@@ -1,10 +1,7 @@
-.header{
-    text-align: center;
-}
 
 body{
     margin: 0;
-    background-color: #e4cbe9;
+    background-color: #ede9ee;
 }
 
 *{
@@ -13,17 +10,11 @@ body{
 
 
 .btn{
-    width: fit-content;
-    background-color: rgb(85, 27, 107);
-    padding: 10px 20px;
-    color: white;
-    font-size: 20px;
-    font-family: sans-serif;
-    user-select: none;
-    cursor: pointer;
+ 
+    background-color: rgb(252, 241, 241);
+    color: rgb(252, 241, 241);
     border-radius: 5px;
-    margin-left: 35%;
-    margin-top: 20px;
+    margin-left: 65%;
     display: inline-block;
 }
 
@@ -32,7 +23,7 @@ body{
     width: fit-content;
     margin: auto;
     font-size: 19px;
-    background-color: #de21d8;
+    background-color: #d781d4;
     color: white;
     padding: 25px;
     padding-bottom: 10px;
@@ -53,30 +44,13 @@ input{
     font-size: .8rem;
     
 }
-
-
 .date{
-    width: 97%;
-}
-
-.pos{
     width: 100%;
 }
 
-tr{
-    margin-bottom: 10px;
-}
 
 
-.error{
-    text-align: center;
-    background-color: rgba(255, 0, 0, 0.518);
-    padding: 7px 12px;
-    max-width: 394px;
-}
-#submit{
-    font-size: 1rem;
-}
+
 
 @media screen and (max-width: 390px) {
 
@@ -87,14 +61,7 @@ tr{
 .label{
     font-size: 4.2vw;
 }
-.error{
-   
-    text-align: center;
-    background-color: rgba(255, 0, 0, 0.518);
-    padding: 7px 12px;
-    max-width: 394px;
-    font-size: .8rem;
-}
+
 input{
     padding: 3px;
     font-size: .6rem;
@@ -103,7 +70,5 @@ input{
 .table{
     padding: 0;
 }
-#submit{
-    font-size: .6rem;
-}
+
 }

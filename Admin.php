@@ -1,160 +1,73 @@
 <?php
 session_start();
-$admin = 'majd';
-// $_SESSION['lastaLI']
-// print_r($_SESSION['arr']);
-// $_SESSION['fn'];
-// $_SESSION['mobile'];
-// $_SESSION['date'];
-// $_SESSION['email'];
-// $_SESSION['pass'];
-// $_SESSION['date_create'];
-if($_SESSION['email'] !== $admin ){
-    echo '<style type="text/css">
-    table {
-        display: none;
-    }
-    </style>';
-}
+
+
+
+$fullname = $_SESSION["fn"] . " " . $_SESSION["sn"] . " " . $_SESSION["thn"] . " " . $_SESSION["ln"];
+$adminemail = $_SESSION["e"];
+$adminpass = $_SESSION["p"];
+$DCreated = $_SESSION["dc"];
+$Dlastlogin = $_SESSION["ulog"];
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>USER PAGE</title>
-    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="userpage.css">
-    <script src="https://kit.fontawesome.com/7b836f378e.js" crossorigin="anonymous"></script>
-    <style>
-        body{
-background-color: #000;
-font-family: 'Zilla Slab', serif; 
-}
-.wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    
-}
-    .profile{
-        position: relative;
-        width: 70%;
-        height:90%;
-        background:url("../img/try.gif");
-        background-size: cover;
-        cursor: pointer;
-        border: 12px;
-        border-top-right-radius: 35px !important;
-        border-radius: 6px;
-        box-shadow:2px 2px 4px 4px #3FB4BE;
-    }
-    .overlay{
-        width: 100%;
-        height: 100%;
-        background:rgba(0,0,0,0.8);
-        border-radius: 12px;
-        cursor: pointer;
-        opacity: 0;
-        transition: all 1s;
-        border-top-right-radius: 35px !important;
-        border-radius: 6px;
-        
-    }
-   
-   
-    .overlay .about{
-        position: relative;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        top:5%;
-        color: #fff;
-        flex-direction: column;
-    }
-    table{
-        
-        margin-top: 5%;
-        width: 70%;
-        height: 100%;
-        text-align: center;
-        border-spacing: 0px;
-    }
-    th{
-        border-bottom: 1px rgb(32, 32, 51) solid;
-    }
-    td{
-        padding-top: 2%;
-    }
-    /* th, td{
-        margin: 30%;
-    } */
-
-    #pic{
-        width: 200px;
-        height: 200px;
-        background-image:url(../img/userpic.jpg) ;
-        border-radius: 50%;
-        box-shadow:0 0 4px 4px #3FB4BE;
-    }
-    a{
-        color: #fff;
-
-    }
-
-    @media only screen and (max-width: 500px) {
-        table {
-          font-size: small;
-        }
-      }
-      @media only screen and (max-width: 350px) {
-        table {
-          font-size: x-small;
-        }
-        h1{
-            font-size: medium;
-        }
-
-      }
-    
-    </style>
+    <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
+    <title>Admin page</title>
 </head>
-<body>
 
-<div class="wrapper">
-    <div class="profile">
-        <div class="overlay">
-            <div class="about">
-                <div id ='pic'></div>
-            
-               <h1>Welcome <?php echo $_SESSION['fname'] ;?></h1>
-                <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Password</th>
-                <th scope="col">Date Created</th>
-                <th scope="col">Date Last Login</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr >
-               
-                <td><?php echo $_SESSION['fname'] ;?> </td>
-                <td><?php echo $_SESSION['email'] ;?> </td><!--User Email-->
-                <td><?php echo $_SESSION['password'] ;?> </td> <!--User Password-->
-                <td><?php echo $_SESSION['date_create'] ;?> </td> <!--User Date Create-->
-                <td><?php echo $_SESSION['last_log'] ;?></td> <!--User Last Login Date-->
-            </tr>
-        </tbody>
+<body style="
+      background-color: #ede9ee; 
+    ">
+
+
+
+    <h2 style="text-align: center;">Welcome to Admin Page </h2>
+
+    <table style="border:solid;text-align: center; margin-left:33%; "
+    cellspacing="50">
+
+        <tr>
+            <th>Full Name :</th>
+            <td> <?php if (isset($fullname)) {
+                        echo $fullname;
+                    } ?> </td>
+        </tr>
+        <tr>
+            <th>E-mail :</th>
+            <td> <?php if (isset($adminemail)) {
+                        echo $adminemail;
+                    } ?></td>
+        <tr>
+            <th> Password :</th>
+            <td><?php if (isset($adminpass)) {
+                    echo $adminpass;
+                } ?></td>
+        </tr>
+        <tr>
+            <th>Date Created:</th>
+            <td> <?php if (isset($DCreated)) {
+                        echo $DCreated;
+                    } ?> </td>
+        </tr>
+        <tr>
+            <th>Date last login:</th>
+            <td> <?php if (isset($Dlastlogin)) {
+                        echo $Dlastlogin;
+                    } ?></td>
+        </tr>
     </table>
+    <br>
+    <div style="text-align: center" class="button">
+          <button onclick="document.location='landing.html'" target="_blank"  type="button" id="button1" value="">LogOut</button>
            
-    
-</div>
+        </div>
 </body>
+
 </html>

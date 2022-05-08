@@ -35,19 +35,7 @@ body{
 
 }
 
-.close{
-    padding: 5px 10px;
-    border: 2px solid #bfdc57;
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translate(410%, 50%);
-    border-radius: 100%;
-    background-color: white;
-    color: black;
-    user-select: none;
-    cursor: pointer;
-}
+
 
 button{
     display: block;
